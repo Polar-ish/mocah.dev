@@ -1,0 +1,60 @@
+@import url(styles/defaults.css);
+
+
+
+body{
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+}
+
+header{
+    margin: 10px;
+    height: 150px;
+     
+    display: grid;
+
+    place-content: center;
+
+    box-shadow: 5px 5px #000;
+
+    &:hover{
+        font-size: 1.6rem;
+        box-shadow: 10px 10px #000;
+    }
+
+    &:active{
+        box-shadow: unset;
+    }
+}
+
+
+.scrollable-text{
+    position: relative;
+    background-color: var(--selectionBackground);
+    width: 80%;
+    min-height: 100px;
+    left: 10%;
+    color: var(--blue);
+    padding: 5%;
+}
+
+.popout-block{
+    background-color: var(--black);
+    box-shadow: 10px 10px var(--background);
+}
+
+
+
+
+.dog{
+    position: absolute;
+    left: var(--posx);
+    top: var(--posy);
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+    background-size: cover;
+    background-image: url(assets/dog.png);
+}
