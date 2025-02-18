@@ -1,70 +1,100 @@
 @import url(styles/defaults.css);
 
-
+svg{
+    fill: currentColor
+}
 
 body{
-    background-color: var(--background);
-    color: var(--foreground);
+    
+    background-color: var(--red);
+    color: var(--black);
+    background-image: url(/assets/icons/star.svg);
+    background-size: 100px 100px;
     font-family: var(--font-family);
     font-size: 1.5rem;
-}
-
-header{
-    margin: 10px;
-    height: 150px;
-     
+    animation: 1s infinite linear bg-move;
     display: grid;
 
-    place-content: center;
+    grid: 1fr 1fr / .5fr 1fr;
+    gap: 80px;
 
-    box-shadow: 5px 5px #000;
 
-    &:hover{
-        font-size: 1.6rem;
-        box-shadow: 10px 10px #000;
+    padding: 100px;
+}
+@keyframes bg-move{
+    from{
+        background-position: 0px 0px;
+    }
+    to{
+        background-position: -100px 100px;
+    }
+}
+
+.card{
+    box-shadow: 20px 20px var(--black);
+    border-radius: 50px;
+    border: 20px solid white;
+    padding: 10px;
+}
+
+.welcome{
+    background: var(--yellow);
+    box-shadow: 20px 20px var(--black);
+    border-radius: 50px;
+    border: 20px solid white;
+    padding: 10px;
+    grid-row: 1;
+}
+
+section{
+    /* background: var(--white); */
+    --dot-size: 7%;
+
+    
+    image-rendering:crisp-edges;
+    background-color: var(--blue);
+    background-size: 2rem 1.5rem;
+    box-shadow: -20px 20px var(--black);
+    border-radius: 50px;
+    border: 20px solid white;
+
+    grid-row: span 2;
+
+    padding: 10px;
+    
+    >article{
+        >h1{
+            font-size: 3rem;
+        }
+    
+        >h2{
+            opacity: .7;
+            font-size: 2rem;
+        }
+
     }
 
-    &:active{
-        box-shadow: unset;
+    >hr{
+        height: 64px;
+        background: url(assets/hr2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: none;
     }
 }
 
+.profile{
+    display: grid;
+    grid: 1fr 1fr / 1fr;
+    background: #aa4fd4;
 
-.background{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    image-rendering: pixelated;
+    >img{
+        background: #832c8d;
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+        image-rendering: pixelated;
+    }
 }
 
-
-.scrollable-text{
-    position: relative;
-    background-color: var(--selectionBackground);
-    width: 80%;
-    min-height: 100px;
-    left: 10%;
-    color: var(--blue);
-    padding: 5%;
-}
-
-.popout-block{
-    background-color: var(--black);
-    box-shadow: 10px 10px var(--background);
-}
-
-
-
-
-.dog{
-    position: absolute;
-    left: var(--posx);
-    top: var(--posy);
-    width: 64px;
-    height: 64px;
-    image-rendering: pixelated;
-    background-size: cover;
-    background-image: url(assets/dog.png);
-}

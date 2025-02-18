@@ -6,14 +6,15 @@
 }
 
 :root{
+    /*
+        Yes, I am using Catpuccin Mocha, how'd you know?
+    */
     --name: Catppuccin Mocha;
 
 
     /* 
         Color Palette
     */
-    --black: #45475A;
-    --blue: #89B4FA;
     --brightBlack: #585B70;
     --brightBlue: #89B4FA;
     --brightCyan: #94E2D5;
@@ -22,6 +23,9 @@
     --brightRed: #F38BA8;
     --brightWhite: #A6ADC8;
     --brightYellow: #F9E2AF;
+    
+    --black: #45475A;
+    --blue: #89B4FA;
     --cyan: #94E2D5;
     --green: #A6E3A1;
     --purple: #F5C2E7;
@@ -34,7 +38,6 @@
     --selectionBackground: #585B70;
     --cursorColor: #F5E0DC;
     
-    /* --font-family: "Quintessential", serif; */
     --font-family: Miracode;
     --font-weight: 400;
     --font-style: normal;

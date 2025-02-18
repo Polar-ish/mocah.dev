@@ -2,12 +2,14 @@
     margin  :0;
     padding :0;
 
-    &, :before, :after{
+    &, &:before, &:after{
         box-sizing: border-box;
     }
 
 }
 
-html{
+html, body{
+    width: 100dvw;
+    height: 100dvh;
     scroll-behavior: smooth;
 }
